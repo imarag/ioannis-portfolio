@@ -1,0 +1,10 @@
+---
+import PageTitle from "./PageTitle.astro"
+import PageSubTitle from "./PageSubTitle.astro"
+const { title, subtitle } = Astro.props
+---
+
+<div class="space-y-2 mb-8">
+    <PageTitle>{title}</PageTitle>
+    <PageSubTitle>{subtitle}</PageSubTitle>
+</div>

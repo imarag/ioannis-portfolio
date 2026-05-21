@@ -1,0 +1,10 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": false,
+    "prettier.jsxSingleQuote": false,
+    "prettier.tabWidth": 4,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    }
+}

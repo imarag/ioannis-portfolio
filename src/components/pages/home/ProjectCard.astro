@@ -1,0 +1,22 @@
+---
+import { Github, ExternalLink } from "lucide-astro"
+const { project } = Astro.props
+---
+
+<div class="card bg-base-300 w-full shadow-sm h-96">
+    <figure>
+        <img src={project.image} alt={project.alt} />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">{project.title}</h2>
+        <p class="text-base-content/60">{project.description}</p>
+        <div class="card-actions justify-start mt-4">
+            <button class="btn btn-primary btn-outline btn-circle btn-md"
+                ><ExternalLink /></button
+            >
+            <button class="btn btn-primary btn-outline btn-circle btn-md"
+                ><Github /></button
+            >
+        </div>
+    </div>
+</div>

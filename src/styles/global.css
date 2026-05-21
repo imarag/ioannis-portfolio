@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin 'daisyui';
+
+@theme inline {
+    --font-sans: var(--font-inter);
+    --font-display: var(--font-instrument-serif);
+}
+
+.bg-portfolio {
+    background: linear-gradient(
+        180deg,
+        var(--color-zinc-950) 0%,
+        var(--color-zinc-900) 30%,
+        var(--color-blue-950) 55%,
+        var(--color-zinc-900) 80%,
+        var(--color-zinc-950) 100%
+    );
+}

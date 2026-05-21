@@ -1,0 +1,29 @@
+---
+import "../styles/global.css"
+import { Font } from "astro:assets"
+import NavBar from "../components/layout/NavBar.astro"
+import Footer from "../components/layout/Footer.astro"
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <Font cssVariable="--font-inter" preload />
+        <Font cssVariable="--font-instrument-serif" preload />
+        <title>Astro Basics</title>
+    </head>
+    <body
+        class="flex flex-col items-stretch min-h-screen bg-portfolio text-zinc-100 font-sans"
+    >
+        <NavBar />
+        <main class="grow container mx-auto space-y-4 p-8">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

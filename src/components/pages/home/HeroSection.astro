@@ -1,0 +1,32 @@
+---
+import HeroImage from "../../../assets/astro.svg"
+import Socials from "./Socials.astro"
+---
+
+<div class="h-screen">
+    <div class="h-full flex flex-row gap-12 p-12">
+        <div class="flex-1 flex flex-col justify-center items-start gap-8">
+            <h1 class="text-5xl flex flex-col items-start gap-4">
+                <span>Hi, I'm</span>
+                <span class="text-primary font-bold">Ioannis Maragkakis</span>
+            </h1>
+            <p class="text-2xl text-gray-600">
+                I build responsive and accessible web applications.
+            </p>
+            <Socials />
+            <div class="flex items-center gap-4">
+                <a href="#projects" class="btn btn-primary">Hire me</a>
+                <a href="/projects" class="btn btn-primary btn-outline"
+                    >View Projects</a
+                >
+            </div>
+        </div>
+        <div class="flex-1 flex flex-col justify-center items-center">
+            <img
+                src={HeroImage.src}
+                alt="Hero Image"
+                class="w-full h-auto object-cover"
+            />
+        </div>
+    </div>
+</div>

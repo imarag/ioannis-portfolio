@@ -1,0 +1,13 @@
+---
+import { socials } from "../../../data"
+---
+
+<div class="flex gap-4">
+    {
+        socials.map((social) => (
+            <a href={social.href} aria-label={social.label} class="">
+                <social.icon class="size-6 hover:text-blue-400 transition" />
+            </a>
+        ))
+    }
+</div>
