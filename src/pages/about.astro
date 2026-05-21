@@ -1,11 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import PageHeader from "../components/ui/PageHeader.astro"
+import Intro from "../components/pages/about/Intro.astro"
+import Experience from "../components/pages/about/Experience.astro"
+import Education from "../components/pages/about/Education.astro"
+import Section from "../components/ui/Section.astro"
+import Languages from "../components/pages/about/Languages.astro"
+import Certifications from "../components/pages/about/Certifications.astro"
+import Achievements from "../components/pages/about/Achievements.astro"
+import Skills from "../components/pages/about/Skills.astro"
 ---
 
 <Layout>
-    <PageHeader
-        title="About Me"
-        subtitle="Full stack developer who loves building web applications from frontend to backend"
-    />
+    <Section title="About Me">
+        <Intro />
+        <Experience />
+        <Education />
+        <Skills />
+        <Languages />
+        <Certifications />
+        <Achievements />
+    </Section>
 </Layout>

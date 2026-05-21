@@ -1,0 +1,33 @@
+---
+const { project } = Astro.props
+import { Icon } from "astro-icon/components"
+---
+
+<div class="card-actions justify-start pt-2">
+    {
+        project.links.live && (
+            <a
+                href={project.links.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary btn-sm"
+            >
+                <Icon name="mdi:open-in-new" class="size-4" />
+                Live Demo
+            </a>
+        )
+    }
+    {
+        project.links.github && (
+            <a
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline btn-sm"
+            >
+                <Icon name="mdi:github" class="size-4" />
+                GitHub
+            </a>
+        )
+    }
+</div>

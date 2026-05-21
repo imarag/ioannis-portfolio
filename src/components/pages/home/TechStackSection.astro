@@ -2,15 +2,14 @@
 import Section from "../../ui/Section.astro"
 import { techStackIcons } from "../../../data"
 import { Icon } from "astro-icon/components"
-import SectionTitle from "../../ui/SectionTitle.astro"
 ---
 
 <Section title="Technologies i work with" centerTitle={true}>
-    <ul class="flex items-center justify-around gap-4">
+    <ul class="flex items-center justify-evenly gap-12 flex-wrap">
         {
             techStackIcons.map((item) => (
                 <li class="flex flex-col items-center">
-                    <Icon name={item.icon} class="size-20" />
+                    <Icon name={item.icon} class="size-12 md:size-16" />
                     <span>{item.name}</span>
                 </li>
             ))

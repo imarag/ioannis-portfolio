@@ -1,0 +1,16 @@
+---
+const { project } = Astro.props
+---
+
+{
+    project.highlights && (
+        <div>
+            <h3 class="font-semibold mb-2">Key features</h3>
+            <ul class="list-disc list-outside ml-5 space-y-1">
+                {project.highlights.map((h) => (
+                    <li>{h}</li>
+                ))}
+            </ul>
+        </div>
+    )
+}

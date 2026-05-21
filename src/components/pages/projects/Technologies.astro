@@ -1,0 +1,25 @@
+---
+const { project } = Astro.props
+---
+
+<div>
+    <h3 class="font-semibold mb-2">Built with</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {
+            Object.entries(project.technologies).map(([category, items]) => (
+                <div>
+                    <p class="text-sm text-base-content/70 mb-1.5">
+                        {category}
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        {items.map((tech) => (
+                            <span class="badge badge-primary badge-soft badge-sm">
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>

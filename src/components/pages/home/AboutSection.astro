@@ -4,21 +4,21 @@ import Section from "../../ui/Section.astro"
 
 <Section title="Some Things About Me" centerTitle={true}>
     <div
-        class="flex flex-row justify-center font-normal items-center gap-4 text-2xl"
+        class="flex flex-col tablet:flex-row font-normal justify-center items-center gap-2 tablet:gap-3"
     >
         <span>A fullstack developer</span>
-        <span>·</span>
+        <span class="hidden tablet:inline">·</span>
         <span>Seismology enthusiast</span>
-        <span>·</span>
+        <span class="hidden tablet:inline">·</span>
         <span>An active learner</span>
     </div>
-    <p class="text-lg text-center mx-auto max-w-3xl text-base-content/60">
+    <p class="text-center mx-auto max-w-3xl text-base-content/60">
         I'm a full stack developer with a passion for building web applications.
         I have experience working with a variety of technologies and enjoy
         learning new ones. In my free time, I like to work on personal projects
         and contribute to open source.
     </p>
     <div class="text-center">
-        <button class="btn btn-primary btn-outline">learn more</button>
+        <a href="/about" class="btn btn-primary btn-outline">learn more</a>
     </div>
 </Section>

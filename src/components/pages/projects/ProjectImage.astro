@@ -1,0 +1,20 @@
+---
+const { project } = Astro.props
+---
+
+{
+    project.image && (
+        <div class="mockup-browser border border-base-300 w-full min-h-96">
+            <div class="mockup-browser-toolbar">
+                <div class="input">{project.links.live}</div>
+            </div>
+            <div>
+                <img
+                    src={project.image.src}
+                    alt={project.alt}
+                    class="w-full h-full object-contain"
+                />
+            </div>
+        </div>
+    )
+}

@@ -1,31 +1,38 @@
 ---
-import HeroImage from "../../../assets/astro.svg"
-import Socials from "./Socials.astro"
+import HeroImage from "../../../assets/hero-image.png"
 ---
 
 <div class="h-screen">
-    <div class="h-full flex flex-row gap-12 p-12">
-        <div class="flex-1 flex flex-col justify-center items-start gap-8">
-            <h1 class="text-5xl flex flex-col items-start gap-4">
-                <span>Hi, I'm</span>
-                <span class="text-primary font-bold">Ioannis Maragkakis</span>
+    <div class="h-full flex flex-row">
+        <div class="flex-1 flex flex-col justify-center items-stretch gap-4">
+            <p class="text-lg text-base-content/90">Hi, I'm</p>
+            <h1
+                class="flex flex-row items-start gap-2 font-semibold font-display text-5xl tracking-tight text-primary"
+            >
+                <span>Ioannis</span>
+                <span class="text-primary">Maragkakis</span>
             </h1>
-            <p class="text-2xl text-gray-600">
-                I build responsive and accessible web applications.
+            <p class="text-lg text-base-content/90">
+                Full stack developer who loves building web apps from frontend
+                to backend
             </p>
-            <Socials />
-            <div class="flex items-center gap-4">
-                <a href="#projects" class="btn btn-primary">Hire me</a>
+
+            <div class="flex items-center gap-4 mt-8">
+                <a
+                    href="/Ioannis_Maragkakis_Resume.pdf"
+                    download="Ioannis_Maragkakis_Resume.pdf"
+                    class="btn btn-primary">Download CV</a
+                >
                 <a href="/projects" class="btn btn-primary btn-outline"
                     >View Projects</a
                 >
             </div>
         </div>
-        <div class="flex-1 flex flex-col justify-center items-center">
+        <div class="flex-1 flex-col justify-center items-center hidden sm:flex">
             <img
                 src={HeroImage.src}
                 alt="Hero Image"
-                class="w-full h-auto object-cover"
+                class="w-full h-auto max-h-125 object-contain"
             />
         </div>
     </div>

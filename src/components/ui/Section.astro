@@ -1,14 +1,28 @@
 ---
-const { title, centerTitle = false, class: className = "" } = Astro.props
+const {
+    title,
+    subtitle,
+    centerTitle = false,
+    class: className = "",
+} = Astro.props
 import SectionTitle from "./SectionTitle.astro"
 ---
 
-<section class={`container mx-auto space-y-20 py-20 ${className || ""}`}>
+<section class={`container mx-auto space-y-8 py-12 ${className || ""}`}>
     {
         title && (
             <SectionTitle class={centerTitle ? "text-center" : ""}>
                 {title}
             </SectionTitle>
+        )
+    }
+    {
+        subtitle && (
+            <p
+                class={`text-base-content/60 ${centerTitle ? "text-center" : ""}`}
+            >
+                {subtitle}
+            </p>
         )
     }
     <slot />

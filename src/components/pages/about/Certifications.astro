@@ -1,0 +1,28 @@
+---
+import { certifications } from "../../../data"
+---
+
+<div>
+    <h2 class="text-2xl font-bold mb-6">Certifications</h2>
+    <div class="space-y-4">
+        {
+            certifications.map((cert) => (
+                <div class="card bg-base-200">
+                    <div class="card-body">
+                        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                            <h3 class="card-title text-base">{cert.title}</h3>
+                            <span class="badge badge-success">
+                                {cert.grade}
+                            </span>
+                        </div>
+                        <ul class="list-disc list-outside ml-5 space-y-1 mt-2">
+                            {cert.bullets.map((b) => (
+                                <li>{b}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>

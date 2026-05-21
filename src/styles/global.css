@@ -1,9 +1,21 @@
 @import "tailwindcss";
-@plugin 'daisyui';
+@plugin "daisyui" {
+    themes:
+        winter --default,
+        dark --prefersdark;
+}
 
 @theme inline {
     --font-sans: var(--font-inter);
     --font-display: var(--font-instrument-serif);
+}
+
+@theme {
+    --breakpoint-phone: 40rem;
+    --breakpoint-tablet: 48rem;
+    --breakpoint-laptop: 64rem;
+    --breakpoint-desktop: 80rem;
+    --breakpoint-wide: 96rem;
 }
 
 .bg-portfolio {
@@ -15,4 +27,12 @@
         var(--color-zinc-900) 80%,
         var(--color-zinc-950) 100%
     );
+}
+
+.bg-page {
+    background-image: url("./src/assets/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: top;
 }

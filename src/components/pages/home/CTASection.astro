@@ -1,22 +1,36 @@
 ---
 import Section from "../../ui/Section.astro"
+import SectionTitle from "../../ui/SectionTitle.astro"
+import { socials } from "../../../data"
+import { Icon } from "astro-icon/components"
 ---
 
-<Section title="Projects">
-    <p class="text-lg text-gray-600">
-        Here are some of the projects I've been working on recently:
-    </p>
-    <ul class="list-disc list-inside space-y-2">
-        <li>
-            <strong>Project A:</strong> A web application for managing tasks and to-dos.
-        </li>
-        <li>
-            <strong>Project B:</strong> An e-commerce platform for selling handmade
-            crafts.
-        </li>
-        <li>
-            <strong>Project C:</strong> A mobile app for tracking fitness and health
-            goals.
-        </li>
-    </ul>
+<Section>
+    <div class="flex flex-col tablet:flex-row gap-4">
+        <div class="grow basis-0 flex flex-col items-center gap-4">
+            <SectionTitle>Contact Me</SectionTitle>
+            <div class="flex justify-start gap-4">
+                {
+                    socials.map((social) => (
+                        <a
+                            class="btn btn-primary btn-circle btn-outline"
+                            href={social.href}
+                            aria-label={social.label}
+                        >
+                            <Icon name={social.icon} class="size-6" />
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+        <div
+            class="grow basis-0 flex flex-col gap-4 items-center justify-center"
+        >
+            <p class="text-center md:text-start text-base-content/70">
+                I'm always open to new opportunities and collaborations. Feel
+                free to reach out to me via email or connect with me on
+                LinkedIn.
+            </p>
+        </div>
+    </div>
 </Section>

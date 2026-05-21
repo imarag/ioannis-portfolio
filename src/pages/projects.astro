@@ -1,13 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import PageHeader from "../components/ui/PageHeader.astro"
-import ProjectCard from "../components/pages/projects/ProjectCard.astro"
-import { projects } from "../data.js"
+import Section from "../components/ui/Section.astro"
+import { projectsDetailed } from "../data"
+import Meta from "../components/pages/projects/Meta.astro"
+import Technologies from "../components/pages/projects/Technologies.astro"
+import ProjectLinks from "../components/pages/projects/ProjectLinks.astro"
+import Highlights from "../components/pages/projects/Highlights.astro"
+import ProjectImage from "../components/pages/projects/ProjectImage.astro"
 ---
 
 <Layout>
-    <PageHeader
-        title="Projects"
-        subtitle="A collection of things i have built. here's what I've been working on"
-    />
+    <Section title="Projects">
+        <div class="text-lg leading-relaxed text-base-content mb-4">
+            <p>
+                A collection of full-stack apps, tools, and platforms I've built
+                — some grew out of my background in seismology and geospatial
+                data, others came from problems I wanted to solve. Each one
+                taught me something different about shipping production-grade
+                software.
+            </p>
+        </div>
+        <div class="space-y-10">
+            {
+                projectsDetailed.map((project) => (
+                    <div class="card bg-base-200 shadow-sm overflow-hidden">
+                        <ProjectImage project={project} />
+                        <div class="card-body space-y-4">
+                            <Meta project={project} />
+                            <p class="leading-relaxed">{project.description}</p>
+                            <Highlights project={project} />
+                            <Technologies project={project} />
+                            <ProjectLinks project={project} />
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </Section>
 </Layout>

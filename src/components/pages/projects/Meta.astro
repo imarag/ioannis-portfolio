@@ -1,0 +1,21 @@
+---
+const { project } = Astro.props
+---
+
+<div>
+    <div
+        class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2"
+    >
+        <h2 class="card-title text-2xl">
+            {project.title}
+        </h2>
+        <div class="flex flex-wrap gap-2">
+            <span class="badge badge-primary badge-outline">
+                {project.period}
+            </span>
+        </div>
+    </div>
+    <p class="text-base-content/70 mt-1">
+        {project.subtitle}
+    </p>
+</div>
