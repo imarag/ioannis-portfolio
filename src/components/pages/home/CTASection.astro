@@ -1,36 +1,37 @@
 ---
 import Section from "../../ui/Section.astro"
 import SectionTitle from "../../ui/SectionTitle.astro"
+import Socials from "../../ui/Socials.astro"
 import { socials } from "../../../data"
 import { Icon } from "astro-icon/components"
 ---
 
 <Section>
-    <div class="flex flex-col tablet:flex-row gap-4">
-        <div class="grow basis-0 flex flex-col items-center gap-4">
-            <SectionTitle>Contact Me</SectionTitle>
-            <div class="flex justify-start gap-4">
-                {
-                    socials.map((social) => (
-                        <a
-                            class="btn btn-primary btn-circle btn-outline"
-                            href={social.href}
-                            aria-label={social.label}
-                        >
-                            <Icon name={social.icon} class="size-6" />
-                        </a>
-                    ))
-                }
-            </div>
-        </div>
+    <div class="card border border-base-300">
         <div
-            class="grow basis-0 flex flex-col gap-4 items-center justify-center"
+            class="card-body flex flex-col items-stretch text-center gap-6 py-12"
         >
-            <p class="text-center md:text-start text-base-content/70">
-                I'm always open to new opportunities and collaborations. Feel
-                free to reach out to me via email or connect with me on
-                LinkedIn.
+            <SectionTitle>Let's Work Together</SectionTitle>
+
+            <p class="max-w-2xl mx-auto text-base-content/70 leading-relaxed">
+                I'm always open to new opportunities and collaborations. Whether
+                you have a project in mind or just want to connect, I'd love to
+                hear from you.
             </p>
+
+            <div>
+                <a
+                    href={socials.email.href}
+                    class="btn btn-primary btn-lg gap-2"
+                >
+                    <Icon name={socials.email.icon} class="size-5" />
+                    Get in touch
+                </a>
+            </div>
+            <div>
+                <div class="divider max-w-sm w-full mx-auto">or find me on</div>
+            </div>
+            <Socials variant="outline" removeSocials={["email"]} />
         </div>
     </div>
 </Section>

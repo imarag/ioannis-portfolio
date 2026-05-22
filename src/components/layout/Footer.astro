@@ -1,6 +1,5 @@
 ---
-import { Icon } from "astro-icon/components"
-import { socials } from "../../data"
+import Socials from "../ui/Socials.astro"
 
 const currentYear = new Date().getFullYear()
 ---
@@ -8,23 +7,7 @@ const currentYear = new Date().getFullYear()
 <footer class="bg-transparent text-center mt-12 py-8">
     <div class="container mx-auto px-8 flex flex-col items-center gap-4">
         <p class="text-2xl font-display">Ioannis Maragkakis</p>
-
-        <div class="flex justify-center gap-3">
-            {
-                socials.map((social) => (
-                    <a
-                        class="btn btn-primary btn-circle btn-sm"
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={social.label}
-                    >
-                        <Icon name={social.icon} class="size-6" />
-                    </a>
-                ))
-            }
-        </div>
-
+        <Socials size="small" variant="full" />
         <p class="text-sm text-base-content/60">
             &copy; {currentYear} Ioannis Maragkakis. All rights reserved.
         </p>

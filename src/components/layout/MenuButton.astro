@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon/components"
+---
+
+<button
+    id="menu-toggle"
+    class="btn btn-ghost sm:hidden"
+    aria-label="Toggle menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu"
+>
+    <Icon
+        id="menu-icon-open"
+        name="material-symbols:menu-rounded"
+        class="size-6"
+    />
+    <Icon
+        id="menu-icon-close"
+        name="material-symbols:close-rounded"
+        class="size-6 hidden"
+    />
+</button>

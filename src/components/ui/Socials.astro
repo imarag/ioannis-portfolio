@@ -1,0 +1,59 @@
+---
+import { socials } from "../../data"
+import { Icon } from "astro-icon/components"
+
+const {
+    class: className,
+    size = "medium",
+    variant = "ghost",
+    removeSocials = [],
+} = Astro.props
+
+const sizeMapping = {
+    small: {
+        icon: "size-5",
+        button: "btn-sm",
+    },
+    medium: {
+        icon: "size-6",
+        button: "btn-md",
+    },
+    large: {
+        icon: "size-8",
+        button: "btn-lg",
+    },
+}
+
+const variantMapping = {
+    ghost: "btn-ghost",
+    full: "btn-primary",
+    outline: "btn-outline btn-primary",
+}
+
+const sizeClasses = sizeMapping[size] ?? sizeMapping.medium
+const buttonVariant = variantMapping[variant] ?? variantMapping.ghost
+
+const visibleSocials = Object.keys(socials)
+    .filter((socialName) => !removeSocials.includes(socialName))
+    .map((socialName) => socials[socialName])
+---
+
+<div class={`flex items-center justify-center gap-4 ${className || ""}`}>
+    {
+        visibleSocials.map((social) => (
+            <a
+                href={social.href}
+                aria-label={social.label}
+                class:list={[
+                    "btn btn-circle",
+                    buttonVariant,
+                    sizeClasses.button,
+                ]}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Icon name={social.icon} class:list={[sizeClasses.icon, ,]} />
+            </a>
+        ))
+    }
+</div>

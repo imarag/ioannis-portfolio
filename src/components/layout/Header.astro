@@ -1,0 +1,47 @@
+---
+import Logo from "./Logo.astro"
+const { isHome } = Astro.props
+import NavMobile from "./NavMobile.astro"
+import NavDesktop from "./NavDesktop.astro"
+import MenuButton from "./MenuButton.astro"
+import Socials from "../ui/Socials.astro"
+---
+
+<header
+    class="sticky top-0 z-40 bg-transparent backdrop-blur border-b border-base-300"
+>
+    <div
+        class="container mx-auto text-sm px-4 tablet:px-8 py-4 flex items-center gap-8"
+    >
+        <Logo />
+        <NavDesktop />
+        <Socials variant="ghost" size="small" class="ms-auto" />
+        <MenuButton />
+    </div>
+    <NavMobile isHome={isHome} />
+</header>
+
+<script>
+    const toggle = document.getElementById("menu-toggle")
+    const menu = document.getElementById("mobile-menu")
+    const iconOpen = document.getElementById("menu-icon-open")
+    const iconClose = document.getElementById("menu-icon-close")
+
+    toggle?.addEventListener("click", () => {
+        const isOpen = menu?.classList.contains("max-h-96")
+
+        if (isOpen) {
+            menu?.classList.remove("max-h-96")
+            menu?.classList.add("max-h-0")
+            iconOpen?.classList.remove("hidden")
+            iconClose?.classList.add("hidden")
+            toggle.setAttribute("aria-expanded", "false")
+        } else {
+            menu?.classList.remove("max-h-0")
+            menu?.classList.add("max-h-96")
+            iconOpen?.classList.add("hidden")
+            iconClose?.classList.remove("hidden")
+            toggle.setAttribute("aria-expanded", "true")
+        }
+    })
+</script>

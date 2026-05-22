@@ -1,0 +1,22 @@
+---
+import { links } from "../../data"
+const pathname = Astro.url.pathname
+const currentPath = pathname === "/" ? "/" : pathname.replace(/\/$/, "")
+---
+
+<nav class="ms-8 gap-4 hidden sm:flex">
+    {
+        links.map((link) => {
+            const isActive = currentPath === link.href
+            return (
+                <a
+                    href={link.href}
+                    class={`link link-hover transition-colors ${isActive && "text-primary font-semibold no-underline"}`}
+                    aria-current={isActive ? "page" : undefined}
+                >
+                    {link.label}
+                </a>
+            )
+        })
+    }
+</nav>

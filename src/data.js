@@ -8,23 +8,23 @@ export const links = [
     { href: "/projects", label: "Projects" },
 ]
 
-export const socials = [
-    {
+export const socials = {
+    github: {
         href: "https://github.com/imarag",
         label: "GitHub",
         icon: "mdi:github",
     },
-    {
-        href: "https://linkedin.com/in/you",
+    linkedin: {
+        href: "https://www.linkedin.com/in/ioannis-maragkakis-1ba2851a9/",
         label: "LinkedIn",
         icon: "mdi:linkedin",
     },
-    {
+    email: {
         href: "mailto:giannis.marar@hotmail.com",
         label: "Email",
         icon: "ic:baseline-email",
     },
-]
+}
 
 export const techStackIcons = [
     { name: "React", icon: "simple-icons:react" },
@@ -108,8 +108,8 @@ export const languages = ["English", "French", "Spanish", "Greek (native)"]
 
 export const intro = [
     "Hi, I'm Ioannis Maragkakis — a full-stack developer based in Thessaloniki, Greece, with over 3 years of experience building web applications and data-driven systems.",
-    "My background started in geophysics and data science, where I spent years working with satellite imagery, seismic data, and large-scale ETL pipelines. Along the way I discovered that what I enjoyed most was building the tools themselves — the interfaces, the APIs, the systems that turn raw data into something people can actually use. That curiosity pulled me into full-stack development, where I now work across the stack with React, Node.js, TypeScript, and Python.",
-    "I care about clean, type-safe code, thoughtful UX, and shipping things that work reliably in production. When I'm not coding, I'm usually exploring side projects — most recently around interactive maps and educational web tools.",
+    "My background is in geophysics and data science. I worked with satellite imagery, seismic data, and large-scale ETL pipelines, and along the way I realized what I enjoyed most was building the tools themselves — the interfaces, the APIs, the systems that turn raw data into something people can actually use. That pulled me into full-stack development, where I now work across the stack with React, Node.js, TypeScript, and Python.",
+    "I care about clean, type-safe code, thoughtful UX, and shipping things that work reliably in production. Outside of work, I'm usually building side projects — lately around interactive maps and educational web tools.",
 ]
 
 export const certifications = [
@@ -137,7 +137,7 @@ export const projectsDetailed = [
         title: "Hazard-Watch",
         subtitle: "Web application for hazard reporting on an interactive map",
         description:
-            "A full-stack web app where users can report hazards (earthquakes, fires, etc.) and view them on a live map. Includes authentication, infinite scrolling for the report feed. Built end-to-end as a study of production-grade patterns — JWT auth, protected routes, optimistic UI, and proper error boundaries.",
+            "A full-stack web app where users can report hazards (earthquakes, fires, etc.) and view them on a live map. Includes authentication and infinite scrolling for the report feed. Built end-to-end as a study of production-grade patterns — JWT auth, protected routes, optimistic UI, and proper error boundaries.",
         image: HazardWatch,
         alt: "Hazard-Watch map view with reported incidents",
         period: "2026",
@@ -145,7 +145,7 @@ export const projectsDetailed = [
         status: "Live",
         highlights: [
             "JWT-based authentication with refresh/access-token flow",
-            "Infinite scrolling feed of reports created by paginated MongoDB queries",
+            "Infinite scrolling feed of reports backed by paginated MongoDB queries",
             "Interactive Leaflet map with clustering for dense areas",
             "User login/register forms with client and server-side validation",
             "React Query for data fetching, caching, and optimistic UI updates",
@@ -171,7 +171,7 @@ export const projectsDetailed = [
         title: "GeoJSON Validator",
         subtitle: "Web tool for validating and debugging GeoJSON files",
         description:
-            "A focused utility that takes GeoJSON uploads and surfaces structural issues — invalid geometry types, missing required fields, malformed coordinates, and spec violations. Errors are listed with line references and shown visually on a map where possible. Built after running into the same validation problems repeatedly while working with geospatial data at Accenture.",
+            "A focused utility that takes GeoJSON uploads and surfaces structural issues — invalid geometry types, missing required fields, malformed coordinates, and spec violations. Errors are listed with line references and shown visually on a map where possible. Built after repeatedly running into the same validation problems while working with geospatial data.",
         image: GeoJSONValidator,
         alt: "GeoJSON Validator showing error highlights",
         period: "2024",
@@ -180,7 +180,7 @@ export const projectsDetailed = [
         highlights: [
             "Server-side validation via FastAPI orchestration",
             "Client-side checks for immediate feedback on common issues",
-            "Server side issues detailed error messages with line numbers and descriptions",
+            "Detailed server-side error messages with line numbers and descriptions",
             "GeoJSON validation according to the official specification, including geometry and feature collection rules",
         ],
         technologies: {
