@@ -37,7 +37,7 @@ const fullTitle = `${title} | Ioannis Maragkakis`
         {description && <meta name="description" content={description} />}
     </head>
     <body
-        class={`flex flex-col items-stretch min-h-screen ${isHome ? "bg-portfolio" : "bg-base-100 bg-page"} text-base-content font-sans`}
+        class={`flex flex-col items-stretch min-h-dvh ${isHome ? "bg-portfolio" : "bg-base-100 bg-page"} text-base-content font-sans`}
     >
         <div class={`${isHome ? "absolute  left-0 right-0" : "relative"}`}>
             <Header isHome={isHome} />
