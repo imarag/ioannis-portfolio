@@ -1,6 +1,6 @@
 import SeismoExplorer from "./assets/seismo-explorer.png"
 import HazardWatch from "./assets/hazard-watch.png"
-import GeoJSONValidator from "./assets/hazard-watch.png"
+import GeoJSONValidator from "./assets/geojson-validator.png"
 
 export const links = [
     { href: "/", label: "Home" },
@@ -169,9 +169,9 @@ export const projectsDetailed = [
     },
     {
         title: "GeoJSON Validator",
-        subtitle: "Web tool for validating and debugging GeoJSON files",
+        subtitle: "Web tool for validating and debugging GeoJSON data",
         description:
-            "A focused utility that takes GeoJSON uploads and surfaces structural issues — invalid geometry types, missing required fields, malformed coordinates, and spec violations. Errors are listed with line references and shown visually on a map where possible. Built after repeatedly running into the same validation problems while working with geospatial data.",
+            "A focused utility for validating GeoJSON files against the official spec. Uploads are checked for invalid geometry types, missing required fields, malformed coordinates, and other structural issues. Each problem is surfaced as an issue object with a clear error message, an explanation of what went wrong, and a suggested fix. Built after running into the same validation problems repeatedly while working with geospatial data.",
         image: GeoJSONValidator,
         alt: "GeoJSON Validator showing error highlights",
         period: "2024",
@@ -195,9 +195,9 @@ export const projectsDetailed = [
     {
         title: "A Journey Into Seismology",
         subtitle:
-            "Educational platform with articles and interactive visualizations",
+            "Educational platform with articles and interactive seismic tools",
         description:
-            "An educational site that walks readers through seismology fundamentals using articles paired with interactive demos — wave propagation animations, frequency-domain explorers, and arrival-time pickers. Built with Astro for fast content delivery and React islands for the interactive components.",
+            "An educational platform covering seismology fundamentals through written articles and interactive tools. Articles span wave propagation, frequency-domain analysis, Python libraries for seismology, and the role of site effects in modern practice. The interactive side includes a P & S wave arrival picker, a MiniSEED file processor, and other hands-on utilities. Built with Astro for fast content delivery and React islands for the interactive components.",
         image: SeismoExplorer,
         alt: "A Journey Into Seismology article page",
         period: "2023 — 2024",

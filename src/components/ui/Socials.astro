@@ -38,7 +38,9 @@ const visibleSocials = Object.keys(socials)
     .map((socialName) => socials[socialName])
 ---
 
-<div class={`flex items-center justify-center gap-4 ${className || ""}`}>
+<div
+    class={`flex items-center justify-center ${variant === "ghost" ? "gap-2" : "gap-4"} ${className || ""}`}
+>
     {
         visibleSocials.map((social) => (
             <a

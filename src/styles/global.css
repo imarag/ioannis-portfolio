@@ -30,7 +30,7 @@
 }
 
 .bg-page {
-    background-image: url("./src/assets/background.svg");
+    background-image: url("/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
