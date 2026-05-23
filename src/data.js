@@ -188,8 +188,8 @@ export const projectsDetailed = [
             Backend: ["FastAPI", "Python"],
         },
         links: {
-            live: "",
-            github: "https://github.com/imarag/geo-hazards/tree/production/geo-server",
+            live: "https://geojson-validator.onrender.com/",
+            github: "https://github.com/imarag/geojson-validator",
         },
     },
     {
